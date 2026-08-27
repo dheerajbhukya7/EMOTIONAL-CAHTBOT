@@ -1,0 +1,14 @@
+from langchain_openai import OpenAIEmbeddings
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
+
+embeddings = OpenAIEmbeddings(
+    model="text-embedding-3-large",
+    dimensions=64,
+)
+
+vector = embeddings.embed_query("You are a helpful assistant.")
+
+print(vector)
+print("Dimensions:", len(vector))

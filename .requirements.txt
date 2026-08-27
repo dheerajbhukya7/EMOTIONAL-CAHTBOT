@@ -1,0 +1,9 @@
+langchain
+langchain-mistralai
+langchain-groq
+langchain-google-genai
+python-dotenv
+langchain_openai
+streamlit>=1.36,<2
+langchain-mistralai>=0.2
+langchain-core>=0.3
