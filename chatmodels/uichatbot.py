@@ -37,7 +37,7 @@ if not api_key:
 @st.cache_resource
 def get_model():
     return ChatMistralAI(
-        model="mistral-large-latest",
+        model="open-mistral-7b",  # Free tier model
         temperature=0.7,
         api_key=api_key,
     )
@@ -45,7 +45,7 @@ def get_model():
 
 # Title
 st.title("🤖 AI Chatbot")
-st.caption("Powered by Mistral Large")
+st.caption("Powered by Mistral AI")
 
 
 # Sidebar
