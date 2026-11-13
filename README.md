@@ -46,10 +46,7 @@ Get your API key from: https://console.mistral.ai/
 
 ## Running the App
 
-### Option 1: Use the launcher script (Windows)
-Double-click `run_chatbot.bat`
-
-### Option 2: Manual command
+### Run with Streamlit
 ```bash
 streamlit run chatmodels/uichatbot.py
 ```
@@ -58,7 +55,7 @@ The app will automatically open in your browser at `http://localhost:8501`
 
 ## Model Configuration
 
-The app currently uses `open-mistral-7b` (free tier compatible). To use a different model, edit `chatmodels/uichatbot.py` line 40:
+The app currently uses `open-mistral-7b`. To use a different model, edit `chatmodels/uichatbot.py` line 40:
 
 ```python
 model="open-mistral-7b",  # Change to: mistral-medium, mistral-large-latest, etc.
@@ -89,7 +86,7 @@ Just ensure `requirements.txt` is present and set the `MISTRAL_API_KEY` environm
 ## Troubleshooting
 
 ### Error: "This model is not available in your subscription tier"
-Change the model in `uichatbot.py` to `open-mistral-7b` (free tier model)
+Change the model in `uichatbot.py` to `open-mistral-7b` if available to your account
 
 ### Error: "MISTRAL_API_KEY is missing"
 Make sure you created the `.env` file with your API key
@@ -100,3 +97,7 @@ Use forward slashes in paths: `streamlit run chatmodels/uichatbot.py`
 ## License
 
 MIT
+
+## Limitations
+
+Personality modes are entertainment features, not mental-health support. Avoid entering sensitive personal information; messages are sent to an external model provider.
