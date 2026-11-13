@@ -101,3 +101,21 @@ MIT
 ## Limitations
 
 Personality modes are entertainment features, not mental-health support. Avoid entering sensitive personal information; messages are sent to an external model provider.
+
+## Repository overview
+
+Streamlit chatbot with personality prompts and Mistral-powered responses.
+
+**Suggested GitHub topics:** `chatbot` `mistral-ai` `langchain` `streamlit` `llm` `python`.
+
+## System architecture
+
+```mermaid
+flowchart LR
+  User --> UI[Streamlit]
+  Personality --> Prompt[System prompt]
+  UI --> Prompt
+  Prompt --> Mistral[Mistral model]
+  Mistral --> History[Session history]
+  History --> UI
+```
